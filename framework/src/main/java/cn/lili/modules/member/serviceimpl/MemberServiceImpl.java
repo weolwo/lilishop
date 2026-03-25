@@ -723,7 +723,7 @@ public class MemberServiceImpl extends ServiceImpl<MemberMapper, Member> impleme
     public void logout(UserEnums userEnums) {
         String currentUserToken = UserContext.getCurrentUserToken();
 
-        AuthUser authUser = UserContext.getAuthUser(currentUserToken);
+        AuthUser authUser = UserContext.getAuthUser();
 
         if (CharSequenceUtil.isNotEmpty(currentUserToken)) {
             cache.remove(CachePrefix.ACCESS_TOKEN.getPrefix(userEnums, authUser.getId()) + currentUserToken);
