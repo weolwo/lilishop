@@ -31,7 +31,7 @@ public class MemberMessageListener implements RocketMQListener<MessageExt> {
 
     @Override
     public void onMessage(MessageExt messageExt) {
-        dispatcherMap.get(messageExt.getTopic()).dispatch(messageExt);
+        dispatcherMap.get(messageExt.getTags()).dispatch(messageExt);
     }
 
     @PostConstruct
