@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import static cn.lili.rocketmq.tags.MemberTagsEnum.MEMBER_REGISTER;
+import static cn.lili.rocketmq.tags.MemberTagsEnum.MEMBER_SING;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -25,7 +26,7 @@ public class MemberSignDispatcher implements MemberMqDispatcher {
 
     @Override
     public String supportTag() {
-        return MEMBER_REGISTER.name();
+        return MEMBER_SING.name();
     }
 
     @Override

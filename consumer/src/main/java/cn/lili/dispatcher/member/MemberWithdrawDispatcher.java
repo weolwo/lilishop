@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 import static cn.lili.rocketmq.tags.MemberTagsEnum.MEMBER_REGISTER;
+import static cn.lili.rocketmq.tags.MemberTagsEnum.MEMBER_WITHDRAWAL;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -27,7 +28,7 @@ public class MemberWithdrawDispatcher implements MemberMqDispatcher {
 
     @Override
     public String supportTag() {
-        return MEMBER_REGISTER.name();
+        return MEMBER_WITHDRAWAL.name();
     }
 
     @Override

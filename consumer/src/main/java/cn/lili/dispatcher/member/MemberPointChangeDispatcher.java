@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+import static cn.lili.rocketmq.tags.MemberTagsEnum.MEMBER_POINT_CHANGE;
 import static cn.lili.rocketmq.tags.MemberTagsEnum.MEMBER_REGISTER;
 
 @Slf4j
@@ -27,7 +28,7 @@ public class MemberPointChangeDispatcher implements MemberMqDispatcher {
 
     @Override
     public String supportTag() {
-        return MEMBER_REGISTER.name();
+        return MEMBER_POINT_CHANGE.name();
     }
 
     @Override

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+import static cn.lili.rocketmq.tags.MemberTagsEnum.MEMBER_INFO_EDIT;
 import static cn.lili.rocketmq.tags.MemberTagsEnum.MEMBER_REGISTER;
 
 @Slf4j
@@ -25,7 +26,7 @@ public class MemberInfoChangeDispatcher implements MemberMqDispatcher {
 
     @Override
     public String supportTag() {
-        return MEMBER_REGISTER.name();
+        return MEMBER_INFO_EDIT.name();
     }
 
     @Override
